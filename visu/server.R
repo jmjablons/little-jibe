@@ -22,7 +22,8 @@ shinyServer(function(input, output) {
             ggplot(dmain(), aes_string(x = input$xcol, fill = input$col))+
                 geom_density(alpha = 0.3),
             ggplot(dmain(), aes_string(x = input$ycol, fill = input$col))+
-                geom_density(alpha = 0.3), nrow = 2)+
+                geom_density(alpha = 0.3), ncol = 2)+
+            coord_flip()+
             scale_y_continuous(limits = c(0,NA))+
             scale_x_continuous(limits = c(0,NA))})
     

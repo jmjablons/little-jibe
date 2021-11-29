@@ -20,6 +20,8 @@ shinyUI(
             actionButton(inputId = "boxplot", label = "boxplot")),
         dashboardBody(
             fluidRow(
-                title = "Plot",
-                box(plotOutput("plot"))))
+                title = "plot",
+                box(plotOutput("plot"),
+                    width = "100%",
+                    height = "100%",)))
     ))
